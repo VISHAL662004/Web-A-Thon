@@ -1,0 +1,131 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1f1f1f;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #121212;
+    color: #fff;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    font-size: 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+header nav ul li a:hover {
+    color: #b575e3;
+}
+
+/* Main Section */
+main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #b575e3;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.trip-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to next row if space is tight */
+    justify-content: center; /* Center the cards horizontally */
+    gap: 30px; /* Add space between the cards */
+}
+
+.trip-card {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    width: 300px;
+    text-align: left;
+    flex: 1 1 300px; /* Allow the card to grow and shrink */
+    /* This will ensure cards are responsive and won't become too small */
+}
+
+.trip-card h3 {
+    color: #b575e3;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.trip-destination,
+.trip-dates,
+.trip-status {
+    color: #ddd;
+    font-size: 1rem;
+}
+
+.trip-status {
+    font-weight: bold;
+    color: #66ff66; /* Green for Completed status */
+}
+
+footer {
+    background-color: #121212;
+    color: #ccc;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer a {
+    color: #b575e3;
+    font-weight: bold;
+}
