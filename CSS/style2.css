@@ -110,13 +110,17 @@ body {
 
 .faq-left {
     flex: 1;
-}
-
-.faq-tag {
     color: #c49aff;
     font-size: 40px;
     font-weight: bold;
     text-transform: uppercase;
+}
+.faq-left.h1{
+
+}
+
+.faq-tag {
+    
 }
 
 .faq-left h1 {
@@ -125,8 +129,8 @@ body {
 }
 
 .faq-left img {
-    object-fit: cover;
-    width: 100%;
+    object-fit: contain;
+    width: 70%;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
