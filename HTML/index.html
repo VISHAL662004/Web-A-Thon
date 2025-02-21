@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Booking</title>
+  <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
-    
+  <div class="container">
+    <div class="booking-form">
+      <div class="tabs">
+        <button class="tab active">Flights</button>
+        <button class="tab">Hotels</button>
+        <button class="tab">Villas & Apts</button>
+        <button class="tab">Holiday Packages</button>
+        <button class="tab">Trains</button>
+        <button class="tab">Buses</button>
+        <button class="tab">Cabs</button>
+        <button class="tab">Visa</button>
+      </div>
+
+      <div class="form-content">
+        <div class="trip-type">
+          <label><input type="radio" name="trip" checked> Oneway</label>
+          <label><input type="radio" name="trip"> Round Trip</label>
+          <label><input type="radio" name="trip"> Multi City</label>
+        </div>
+
+        <div class="fields">
+          <div class="field">
+            <label for="from">From</label>
+            <input type="text" id="from" placeholder="Delhi (DEL)">
+          </div>
+
+          <div class="field">
+            <label for="to">To</label>
+            <input type="text" id="to" placeholder="Bangalore (BLR)">
+          </div>
+
+          <div class="field">
+            <label for="departure">Departure</label>
+            <input type="date" id="departure">
+          </div>
+
+          <div class="field">
+            <label for="return">Return</label>
+            <input type="date" id="return">
+          </div>
+
+          <div class="field">
+            <label for="travelers">Travelers & Class</label>
+            <select id="travelers">
+              <option>1 Traveller, Economy</option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+        </div>
+
+        <div class="fare-options">
+          <button>Regular Fare</button>
+          <button>Armed Forces</button>
+          <button>Student Fare</button>
+          <button>Senior Citizen</button>
+          <button>Double Seat</button>
+        </div>
+
+        <button id="search-button" class="search-button">Search</button>
+
+        <p class="helper-text">Looking for the cheapest return flights from Delhi to Bangalore?</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>

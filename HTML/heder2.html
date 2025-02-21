@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="header.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo"> <img src="logo.png" alt="Logo"> </a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <button class="dropbtn">Planets ▼</button>
+                <ul class="dropdown-content">
+                    <li><a href="#">Mercury</a></li>
+                    <li><a href="#">Venus</a></li>
+                    <li><a href="#">Earth</a></li>
+                    <li><a href="#">Mars</a></li>
+                    <li><a href="#">Jupiter</a></li>
+                    <li><a href="#">Saturn</a></li>
+                    <li><a href="#">Uranus</a></li>
+                    <li><a href="#">Neptune</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="btn">My Trips</a></li>
+            <li><a href="#" class="btn login">Login/Signup</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <script>
+        $(document).ready(function() {
+            $('.hamburger').click(function() {
+                $('.nav-links').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

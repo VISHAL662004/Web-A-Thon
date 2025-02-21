@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Exploration</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Styles for the header */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 10px 30px;
+        }
+        .logo img {
+            width: 50px;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        .dropdown {
+            position: relative;
+            margin-right: 20px;
+        }
+        .dropdown button {
+            background-color: #444;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- Logo Section -->
+    <div class="logo">
+        <img src="your-logo.png" alt="Space Exploration Logo">
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <!-- Planet Dropdown -->
+        <div class="dropdown">
+            <button>Planet</button>
+            <div class="dropdown-content">
+                <a href="#">Mercury</a>
+                <a href="#">Venus</a>
+                <a href="#">Earth</a>
+                <a href="#">Mars</a>
+                <a href="#">Jupiter</a>
+                <a href="#">Saturn</a>
+                <a href="#">Uranus</a>
+                <a href="#">Neptune</a>
+            </div>
+        </div>
+
+        <!-- My Trips Button -->
+        <button class="button">My Trips</button>
+
+        <!-- Login and Signup Buttons -->
+        <button class="button">Login</button>
+        <button class="button">Sign Up</button>
+    </nav>
+</header>
+
+</body>
+</html>
