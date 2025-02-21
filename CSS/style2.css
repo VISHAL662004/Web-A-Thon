@@ -90,6 +90,97 @@ body {
 }
 
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7f6;
+    color: #2c3e50;
+}
+
+.faq-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    max-width: 1100px;
+    margin: auto;
+    gap: 50px;
+}
+
+.faq-left {
+    flex: 1;
+}
+
+.faq-tag {
+    color: #ff7f50;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.faq-left h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.faq-left img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-right {
+    flex: 1;
+    max-width: 500px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .faq-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .faq-left h1 {
+        font-size: 28px;
+    }
+
+    .faq-right {
+        width: 100%;
+    }
+}
+
+
 @media (max-width: 768px) {
     .booking-form {
         flex-direction: column;
