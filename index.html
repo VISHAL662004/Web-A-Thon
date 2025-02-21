@@ -5,6 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPACE EXPO</title>
     <link rel="stylesheet" href="../CSS/style.css">
+    <style>
+        /* Smooth transition for hover effects */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animated fade-in for cards */
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Smooth transition for the FAQ items */
+        .faq-question {
+            transition: color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .faq-question:hover {
+            color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .faq-answer {
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+            opacity: 1;
+        }
+
+        /* Smooth scrolling effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hover effect for search button */
+        .search-btn {
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hover effect for inputs */
+        input[type="text"], input[type="date"], select {
+            transition: border-color 0.3s ease, transform 0.2s ease;
+        }
+
+        input[type="text"]:focus, input[type="date"]:focus, select:focus {
+            border-color: #0056b3;
+            outline: none;
+            transform: scale(1.05);
+        }
+
+        /* Animated header with bouncing effect */
+        #header-placeholder {
+            animation: bounceIn 1s ease-out;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: translateY(-30px); opacity: 0; }
+            50% { transform: translateY(15px); opacity: 1; }
+            100% { transform: translateY(0); }
+        }
+
+        /* Smooth Fade-In Animation for FAQ Section */
+        .faq-left, .faq-right {
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Cards fade-in animation */
+        .card {
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Slightly enlarged text animation for titles */
+        h1, h2 {
+            transition: transform 0.3s ease;
+        }
+
+        h1:hover, h2:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
 
@@ -48,8 +170,6 @@
         <button class="search-btn" onclick="searchFlights()">Search</button>
     </div>
 
-
-
     <div class="container">
         <h1 class="title">Travel Blog</h1>
         <div class="card-container">
@@ -86,13 +206,8 @@
         </div>
     </div>
 
-
-
-
-
     <section class="faq-section">
         <div class="faq-left">
-            
             <h1>Unpacking Your Travel Questions</h1>
             <img src="../photos/astro 1.png" alt="Travel Image">
         </div>
