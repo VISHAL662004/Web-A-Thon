@@ -28,3 +28,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+// Load header and footer
+// Function to load an external HTML file into a specified element
+function loadHTML(file, elementId) {
+    fetch(file)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.error(`Error loading ${file}:`, error));
+}
+
+// Load the header and footer
+document.addEventListener("DOMContentLoaded", function () {
+    loadHTML("../HTML/header3.html", "header-placeholder");
+    loadHTML("../HTML/footer.html", "footer-placeholder");
+});
