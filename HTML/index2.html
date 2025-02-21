@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <link rel="stylesheet" href="../CSS/style2.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li class="active">Flights</li>
+            <li>Hotels</li>
+            <li>Villas & Apts</li>
+            <li>Holiday Packages</li>
+            <li>Trains</li>
+            <li>Buses</li>
+            <li>Cabs</li>
+            <li>Visa</li>
+            <li>More</li>
+        </ul>
+    </nav>
+
+    <div class="booking-container">
+        <div class="trip-options">
+            <label><input type="radio" name="trip" checked> Oneway</label>
+            <label><input type="radio" name="trip"> Round Trip</label>
+            <label><input type="radio" name="trip"> Multi City</label>
+        </div>
+
+        <div class="booking-form">
+            <div class="input-group">
+                <label>From</label>
+                <input type="text" id="from" value="Delhi" readonly>
+            </div>
+            <div class="input-group">
+                <label>To</label>
+                <input type="text" id="to" value="Bangalore" readonly>
+            </div>
+            <div class="input-group">
+                <label>Departure</label>
+                <input type="date" id="departure" value="2025-07-21">
+            </div>
+            <div class="input-group">
+                <label>Return</label>
+                <input type="date" id="return" disabled placeholder="Tap to add">
+            </div>
+            <div class="input-group">
+                <label>Travellers & Class</label>
+                <select id="travellers">
+                    <option>1 Traveller - Economy</option>
+                    <option>2 Travellers - Economy</option>
+                    <option>Business Class</option>
+                </select>
+            </div>
+        </div>
+
+        <button class="search-btn" onclick="searchFlights()">Search</button>
+    </div>
+    <section class="faq-section">
+        <div class="faq-left">
+            <span class="faq-tag">FAQ</span>
+            <h1>Unpacking Your Travel Questions</h1>
+            <img src="../photos/faq image.jpg" alt="Travel Image">
+        </div>
+        
+        <div class="faq-right">
+            <div class="faq-item active">
+                <button class="faq-question">What destinations do you offer tours to?</button>
+                <div class="faq-answer">
+                    Triptopia offers a range of services including web development, software development, IT consulting, and digital marketing.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">What types of service do you provide?</button>
+                <div class="faq-answer">
+                    We provide guided tours, adventure packages, and customized travel plans for different destinations.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What is included in the tour package?</button>
+                <div class="faq-answer">
+                    Our packages include accommodation, meals, sightseeing, and transport.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What should I pack for my trip?</button>
+                <div class="faq-answer">
+                    The essentials include travel documents, comfortable clothing, toiletries, and any specific gear for your activities.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../JS/script.js"></script>
+
+</body>
+</html>
